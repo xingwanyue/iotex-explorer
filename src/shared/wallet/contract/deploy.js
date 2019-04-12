@@ -314,9 +314,9 @@ export class Deploy extends Component {
   render() {
     const {wallet} = this.props;
 
-    if (!wallet) {
-      return null;
-    }
+    // if (!wallet) {
+    //   return null;
+    // }
 
     const {rawTransaction, broadcast, message, generatingByte, deploying} = this.state;
 

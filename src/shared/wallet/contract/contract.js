@@ -95,9 +95,9 @@ export class Contract extends Component {
     const {wallet, address, updateWalletInfo, serverUrl} = this.props;
     const {selectedTab} = this.state;
 
-    if (!wallet) {
-      return null;
-    }
+    // if (!wallet) {
+    //   return null;
+    // }
 
     return (
       <div className='column'>

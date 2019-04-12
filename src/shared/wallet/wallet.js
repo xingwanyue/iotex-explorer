@@ -117,21 +117,11 @@ export class Wallet extends Component {
       <div>
         <div className='columns'>
           <div className='column is-three-quarters'>
-            {
-              wallet ? (
-                [tabs, tab]
-              ) : (
-                <UnlockWallet
-                  wallet={wallet}
-                  setWallet={this.setWallet}
-                  updateWalletInfo={this.updateWalletInfo}
-                  createNew={this.state.createNew}
-                  setCreateNew={() => this.setState({createNew: true})}
-                  chainId={chainId}
-                />
-              )
-            }
-
+            <Contract
+              wallet={wallet}
+              address={this.props.address} serverUrl={serverUrl}
+              updateWalletInfo={this.updateWalletInfo}
+            />
           </div>
           <div className='column'>
             <AccountSection createNew={createNew} wallet={wallet} setWallet={this.setWallet}
